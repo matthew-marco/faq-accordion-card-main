@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --Soft-red: hsl(14, 88%, 65%);
+    --Soft-violet: hsl(273, 75%, 66%);
+    --Soft-blue: hsl(240, 73%, 65%);
+    --Very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --Dark-grayish-blue: hsl(240, 6%, 50%);
+    --Light-grayish-blue: hsl(240, 5%, 91%);
+
+}
+body{
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color: var(--Soft-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+main .container{
+    background-color: white;
+    display: flex;
+    position: relative;
+    border-radius: 10px;
+    padding: 5px;
+}
+main .container .left{
+    flex: 1;
+}
+main .container .left .box{
+    position: absolute;
+    left: -11%;
+    top: 42%;
+    z-index: 2;
+    
+}
+main .container .left {
+    text-align: center;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+main .container .left .woman{
+    width: 80%;
+    text-align: center;
+}
+
+main .container .right{
+    flex: 1;    
+}
+
+main .container .right h1{
+    margin: 0;
+
+    font-size: 20px;
+    color: var( --Very-dark-grayish-blue);
+    font-weight: 700;
+
+
+}
+main .container .qustions{
+    width: 100%;
+    transition: 1s;
+}
+
+main .container .qustion{
+    margin-bottom: 20px;
+}
+
+main .container .right p{
+    font-size: 15px;
+    width: 50ch;
+    line-height: 1.5;
+    color: var( --Dark-grayish-blue);
+    font-weight: 400;
+    display: none;
+    transition: 1s;
+ 
+}
+.right .qustions .qustion.active p {
+    display: block;
+    transition: 1s;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    margin-right:10px ;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.head img{
+    width: 15px;
+}
+
+@media (max-width:767px) { /*small devices*/
+    .container{
+        max-width: 440px;
+    }
+    main{
+        padding: 20px;
+    }
+    .container{
+        flex-direction: column;
+    }
+    .container .left .box{
+        display: none;
+
+    }
+    .container .left .woman{
+        margin: auto;
+    }
+    main .container .right p{
+        width: 30ch;
+    }
+    main .container .right h1{
+        font-size: 19px;
+    }
+}
+
+
+@media (min-width:576px) { /*small devices*/
+    .container{
+        max-width: 540px;
+    }
+    
+}
+@media (min-width:768px) { /*medium devices*/
+    .container{
+        max-width: 720px;
+    }
+    
+}
+@media (min-width:992px) { /*pc devices*/
+    .container{
+        max-width: 960px;
+    }
+    
+}
+@media (min-width:1200px) { /*large devices*/
+    .container{
+        max-width: 1140px;
+    }
+    
+}
+@media (min-width:1500px) { /*large devices*/
+    .container{
+        max-width: 1440px;
+    }
+    
+}
